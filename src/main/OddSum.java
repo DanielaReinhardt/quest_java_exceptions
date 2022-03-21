@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+import javax.xml.stream.events.EndElement;
+
+import org.xml.sax.ErrorHandler;
+
 public class OddSum {
 
     public static void main(String[] args) {
@@ -16,18 +20,37 @@ public class OddSum {
                 System.out.print(" " + v);
             System.out.println();
         }
+        try{
         for (int i = 0; i < args.length; i++) {
             listInt.add(Integer.parseInt(args[i]));
         }
 
         res = sum(listInt);
-        if (test) {
+    } catch (NumberFormatException nfe) {
+        System.out.println("Wrong value in the list");
+        //break;
+        res=0;
+        //return res.stop;
+        //listInt.remove(5);
+        
+    //}finally{
+        
+    //    for (int i = 0; i < args.length; i++) {
+    //        listInt.add(Integer.parseInt(args[i]));
+    //        listInt.remove(5);
+    //        res =sum(listInt);
+//
+    //       res = sum(listInt);
+    //}
+   }
+
+    if (test) {
             return res;
         }
 
         System.out.println("Sum of odd elements : " + res);
         System.out.println("END!");
-
+    
         return 0;
     }
 
@@ -38,7 +61,7 @@ public class OddSum {
             if (value % 2 != 0) {
                 result += value;
             }
-        }
+          }
         return result;
     }
 }
