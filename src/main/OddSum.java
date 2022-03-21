@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 
-import javax.xml.stream.events.EndElement;
-
-import org.xml.sax.ErrorHandler;
 
 public class OddSum {
 
@@ -28,20 +25,9 @@ public class OddSum {
         res = sum(listInt);
     } catch (NumberFormatException nfe) {
         System.out.println("Wrong value in the list");
-        //break;
-        res=0;
-        //return res.stop;
-        //listInt.remove(5);
-        
-    //}finally{
-        
-    //    for (int i = 0; i < args.length; i++) {
-    //        listInt.add(Integer.parseInt(args[i]));
-    //        listInt.remove(5);
-    //        res =sum(listInt);
-//
-    //       res = sum(listInt);
-    //}
+      
+        res=-1;
+       
    }
 
     if (test) {
